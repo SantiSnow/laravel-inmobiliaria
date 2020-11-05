@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Inmueble;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $inmuebles_destacados = 'Todos los inmuebles se mostrarán aca';
+    $inmuebles_destacados = Inmueble::all();
 
     return view('welcome', compact('inmuebles_destacados'));
 });

@@ -147,104 +147,19 @@
 <br />
 <div class="container">
     @yield("contenido")
-    <div class="row">
+
+    @foreach($inmuebles_destacados as $i)
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready-2.png" class="card-img-top" alt="#">
+                <img src="imgs/{{ $i->Foto }}" class="card-img-top" alt="Foto principal de la propiedad">
                 <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
+                    <h5 class="card-title">{{ $i->Direccion }}</h5>
+                    <p class="card-text">{{ $i->Descripcion }}</p>
                     <a href="#" class="btn btn-light">Conocer más...</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready.png" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready-2.png" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready.png" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready-2.png" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready-2.png" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready.png" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready.png" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready-2.png" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    @endforeach
 </div>
 
 <br />
