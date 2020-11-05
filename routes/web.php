@@ -15,13 +15,18 @@ use App\Models\Inmueble;
 
 Route::get('/', function () {
 
-    $inmuebles_destacados = Inmueble::all();
+    $inmuebles_destacados = Inmueble::where('Destacada', 1)
+        ->orderBy('id')
+        ->get();
 
     return view('welcome', compact('inmuebles_destacados'));
 });
 
 Route::get('/propiedades', function (){
-    return view('propiedades');
+
+    $inmuebles = Inmueble::all();
+
+    return view('propiedades', compact('inmuebles'));
 });
 
 Route::get('/sobre-nosotros', function (){

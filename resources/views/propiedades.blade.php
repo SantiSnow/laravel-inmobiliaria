@@ -16,8 +16,27 @@
 @endsection
 @section("contenido")
 
-    <h1>Todas las propiedades:</h1>
-
+    <br />
+    <br />
+    <div class="text-center">
+        <h1>Todas las Propiedades:</h1>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        @foreach($inmuebles as $i)
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="imgs/{{ $i->Foto }}" class="card-img-top" alt="Foto principal de la propiedad">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $i->Direccion }}</h5>
+                        <p class="card-text">{{ $i->Descripcion }}</p>
+                        <a href="propiedad/{{ $i->id }}" class="btn btn-light">Conocer más...</a>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
 @endsection
 @section("footer")
 

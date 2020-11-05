@@ -25,7 +25,7 @@
     <div class="row">
     @foreach($inmuebles_destacados as $i)
         <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
+            <div class="card">
                 <img src="imgs/{{ $i->Foto }}" class="card-img-top" alt="Foto principal de la propiedad">
                 <div class="card-body">
                     <h5 class="card-title">{{ $i->Direccion }}</h5>
