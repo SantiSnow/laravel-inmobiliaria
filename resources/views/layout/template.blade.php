@@ -16,21 +16,15 @@
             background-repeat: no-repeat;
             margin-bottom: 0;
         }
-        .propiedad-buscador{
-            background-color: #343a40;
-        }
         .navbar{
             margin-top: 0;
         }
-        .busqueda-codigo{
-            width: 20%;
-        }
-        .busquedas{
+        /*.busquedas{
             margin-left: 35px;
         }
         .alq{
             margin-left: 120px;
-        }
+        }*/
         .btn{
             margin: 5px;
         }
@@ -45,43 +39,47 @@
             color: black;
         }
     </style>
-    <title>Inmobiliaria</title>
 </head>
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         @yield("navbar")
-        <a class="navbar-brand" href="#">Empresa</a>
+        <a class="navbar-brand" href="#">Miriam Mendoza</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="{{ url('/propiedades') }}">Todas las propiedades</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="{{ url('/contacto') }}">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="{{ url('/sobre-nosotros') }}">Sobre Nosotros</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li>Teléfono: 1122-3344 / 22331199</li>
             </ul>
         </div>
     </nav>
 </header>
-<div class="jumbotron">
+<div class="jumbotron jumbotron-fluid">
     @yield("header")
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">Lorem ipsum dolor sit amet</h1>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, dicta, cupiditate consequatur necessitatibus quos libero eius ipsum qui sit molestiae.</p>
+                <h1 class="text-center">Inmobiliaria Miriam Mendoza</h1>
                 <p>&nbsp;</p>
-                <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> </p>
+                <p class="text-center">Alcanzar tus sueños, es posible.</p>
+                <p class="text-center">Llegar a esa propiedad en la cual siempre soñaste, puede ser posible con nosotros.</p>
+                <p>&nbsp;</p>
+                <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Ver todas las propiedades</a> </p>
                 <br />
                 <br />
                 <br />
@@ -104,25 +102,39 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <form class="form-inline busquedas">
-            <input class="form-control mr-sm-2" type="search" placeholder="Código de propiedad" aria-label="Search">
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
-        <form class="form-inline busquedas">
-            <input class="form-control mr-sm-2" type="search" placeholder="Partido" aria-label="Search">
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
-        <form class="form-inline busquedas">
-            <input class="form-control mr-sm-2" type="search" placeholder="Localidad" aria-label="Search">
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
-        <form class="form-inline alq busquedas">
-            <!-- input class="form-control mr-sm-2" type="search" placeholder="Localidad" aria-label="Search" -->
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Alquileres</button>
-        </form>
-        <form class="form-inline busquedas">
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Ventas</button>
-        </form>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <form class="form-inline busquedas">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Código de propiedad" aria-label="Search">
+                    <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </li>
+            <li class="nav-item">
+                <form class="form-inline busquedas">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Partido" aria-label="Search">
+                    <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </li>
+            <li class="nav-item">
+                <form class="form-inline busquedas">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Localidad" aria-label="Search">
+                    <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <form class="form-inline alq busquedas">
+                    <!-- input class="form-control mr-sm-2" type="search" placeholder="Localidad" aria-label="Search" -->
+                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Alquileres</button>
+                </form>
+            </li>
+            <li class="nav-item">
+                <form class="form-inline busquedas">
+                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Ventas</button>
+                </form>
+            </li>
+        </ul>
     </div>
 </nav>
 
@@ -138,7 +150,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready-2.jpg" class="card-img-top" alt="#">
+                <img src="imgs/dummy-ready-2.png" class="card-img-top" alt="#">
                 <div class="card-body">
                     <h5 class="card-title">Propiedad</h5>
                     <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
@@ -148,7 +160,7 @@
         </div>
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready.jpg" class="card-img-top" alt="#">
+                <img src="imgs/dummy-ready.png" class="card-img-top" alt="#">
                 <div class="card-body">
                     <h5 class="card-title">Propiedad</h5>
                     <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
@@ -158,40 +170,7 @@
         </div>
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready-2.jpg" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready.jpg" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready-2.jpg" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Propiedad</h5>
-                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready-2.jpg" class="card-img-top" alt="#">
+                <img src="imgs/dummy-ready-2.png" class="card-img-top" alt="#">
                 <div class="card-body">
                     <h5 class="card-title">Propiedad</h5>
                     <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
@@ -204,7 +183,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready.jpg" class="card-img-top" alt="#">
+                <img src="imgs/dummy-ready.png" class="card-img-top" alt="#">
                 <div class="card-body">
                     <h5 class="card-title">Propiedad</h5>
                     <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
@@ -214,7 +193,7 @@
         </div>
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready.jpg" class="card-img-top" alt="#">
+                <img src="imgs/dummy-ready-2.png" class="card-img-top" alt="#">
                 <div class="card-body">
                     <h5 class="card-title">Propiedad</h5>
                     <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
@@ -224,7 +203,40 @@
         </div>
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
-                <img src="imgs/dummy-ready-2.jpg" class="card-img-top" alt="#">
+                <img src="imgs/dummy-ready-2.png" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title">Propiedad</h5>
+                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
+                    <a href="#" class="btn btn-light">Conocer más...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="imgs/dummy-ready.png" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title">Propiedad</h5>
+                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
+                    <a href="#" class="btn btn-light">Conocer más...</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="imgs/dummy-ready.png" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title">Propiedad</h5>
+                    <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
+                    <a href="#" class="btn btn-light">Conocer más...</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="imgs/dummy-ready-2.png" class="card-img-top" alt="#">
                 <div class="card-body">
                     <h5 class="card-title">Propiedad</h5>
                     <p class="card-text">Descripción corta de la propiedad, precio, ambientes, detalles, ubicación.</p>
@@ -271,6 +283,20 @@
             </div>
             <div class="col-6">
                 <h2 class="titulos-footer">Secciones</h2>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Todas las propiedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Sobre Nosotros</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

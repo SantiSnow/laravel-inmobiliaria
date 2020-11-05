@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('welcome', compact('inmuebles_destacados'));
 });
 
+Route::get('/propiedades', function (){
+    return view('propiedades');
+});
+
 Route::get('/sobre-nosotros', function (){
     return view('sobreNosotros');
 });

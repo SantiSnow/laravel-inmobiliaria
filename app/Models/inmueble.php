@@ -18,6 +18,7 @@ class Inmueble extends Model
         'Precio',
         'Tipo',
         'Foto',
-        'Destacada'
+        'Destacada',
+        'Descripcion'
     ];
 }
