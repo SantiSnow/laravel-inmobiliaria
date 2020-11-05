@@ -16,8 +16,27 @@
 @endsection
 @section("contenido")
 
+    <br />
     <h1>Contacto:</h1>
+    <br />
 
+    <h3>Teléfonos:</h3>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <h3>Redes Sociales:</h3>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <h3>¿Cómo llegar?</h3>
+    <br />
+    <br />
+    <br />
+    <br />
 @endsection
 @section("footer")
 
