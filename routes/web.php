@@ -21,9 +21,9 @@ Route::get('/', function () {
 });
 
 Route::get('/sobre-nosotros', function (){
-    return 'Esta es la pagina sobre nosotros';
+    return view('sobreNosotros');
 });
 
 Route::get('/contacto', function (){
-    return 'Esta es la pagina de contacto';
+    return view('contacto');
 });
