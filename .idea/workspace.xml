@@ -21,7 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0723660e-4893-4732-beb7-ed02efaa43ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contacto.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacto.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/propiedades.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/propiedades.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sobreNosotros.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sobreNosotros.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +195,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604523295736</updated>
       <workItem from="1604523296776" duration="4013000" />
-      <workItem from="1604577595725" duration="7188000" />
+      <workItem from="1604577595725" duration="11169000" />
     </task>
     <servers />
   </component>

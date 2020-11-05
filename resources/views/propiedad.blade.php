@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Todas las propiedades - Inmobiliaria</title>
+    <title>Inmobiliaria - Miriam Mendoza</title>
+
+    <style>
+        .img-descript{
+            width: 70%;
+            border-radius: 15px;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -15,8 +23,25 @@
 @section("header")
 @endsection
 @section("contenido")
-
-    <h1>Todas las propiedades:</h1>
+    <br />
+    <h1>Propiedad</h1>
+    <br />
+    <br />
+    <div class="col-md-6">
+        <img alt="imagen descriptiva de la propiedad" src="../imgs/{{ $propiedad->Foto }}" class="img-descript" />
+    </div>
+    <br />
+    <br />
+    <ul>
+        <li>Código de propiedad: {{ $propiedad->id }}</li>
+        <li>Dirección: {{ $propiedad->Direccion }}</li>
+        <li>Partido: {{ $propiedad->Partido }}</li>
+        <li>Localidad: {{ $propiedad->Localidad }}</li>
+        <li>Barrio: {{ $propiedad->Barrio }}</li>
+    </ul>
+    <br />
+    <p>{{ $propiedad->Descripcion }}</p>
+    <br />
 
 @endsection
 @section("footer")

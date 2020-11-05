@@ -31,3 +31,8 @@ Route::get('/sobre-nosotros', function (){
 Route::get('/contacto', function (){
     return view('contacto');
 });
+
+Route::get('/propiedad/{id}', function ($id){
+    $propiedad = Inmueble::find($id);
+    return view('propiedad', compact('propiedad'));
+});

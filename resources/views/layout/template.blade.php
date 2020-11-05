@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/bootstrap.min.jurnal.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.jurnal.css">
     <style>
         .navbar{
             color: black;
         }
         .jumbotron{
-            /*background-image: url("imgs/skyscraper-building.jpg");*/
+            background-image: url("../imgs/fondo-plantilla.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             margin-bottom: 0;
@@ -37,6 +37,14 @@
         }
         .titulos-footer{
             color: black;
+        }
+        .cont-titulo{
+            background-color: #dae0e5;
+            border-radius: 5px;
+        }
+        .cont-slogan{
+            background-color: #dae0e5;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -74,16 +82,16 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">Inmobiliaria Miriam Mendoza</h1>
+                <div class="cont-titulo">
+                    <h1 class="text-center">Inmobiliaria Miriam Mendoza</h1>
+                </div>
                 <p>&nbsp;</p>
-                <p class="text-center">Alcanzar tus sueños, es posible.</p>
-                <p class="text-center">Llegar a esa propiedad en la cual siempre soñaste, puede ser posible con nosotros.</p>
+                <div class="cont-slogan"><strong>
+                    <p class="text-center">Alcanzar tus sueños, puede lograrse.</p>
+                    <p class="text-center">Llegar a esa propiedad en la cual siempre soñaste, puede ser posible con nosotros.</p></strong>
+                </div>
                 <p>&nbsp;</p>
                 <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Ver todas las propiedades</a> </p>
-                <br />
-                <br />
-                <br />
-                <br />
                 <br />
                 <br />
                 <br />
@@ -137,37 +145,12 @@
         </ul>
     </div>
 </nav>
-
-<br />
-<br />
-<div class="text-center">
-    <h1>Propiedades</h1>
-</div>
-<br />
-<br />
 <div class="container">
     @yield("contenido")
 
-    @foreach($inmuebles_destacados as $i)
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="imgs/{{ $i->Foto }}" class="card-img-top" alt="Foto principal de la propiedad">
-                <div class="card-body">
-                    <h5 class="card-title">{{ $i->Direccion }}</h5>
-                    <p class="card-text">{{ $i->Descripcion }}</p>
-                    <a href="#" class="btn btn-light">Conocer más...</a>
-                </div>
-            </div>
-        </div>
-    @endforeach
+
 </div>
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 <br />
 <br />
 <br />
@@ -190,26 +173,26 @@
                     <br />
                 </div>
                 <div id="redes" class="row">
-                    <div class="col-2"><img class="rounded" src="imgs/redes/facebook.png" alt="logo facebook"></div>
-                    <div class="col-2"><img class="rounded" src="imgs/redes/gmail.png" alt="logo gmail"></div>
-                    <div class="col-2"><img class="rounded" src="imgs/redes/twitter.png" alt="logo twitter"></div>
-                    <div class="col-2"><img class="rounded" src="imgs/redes/whatsapp.png" alt="logo whatsapp"></div>
+                    <div class="col-2"><img class="rounded" src="../imgs/redes/facebook.png" alt="logo facebook"></div>
+                    <div class="col-2"><img class="rounded" src="../imgs/redes/gmail.png" alt="logo gmail"></div>
+                    <div class="col-2"><img class="rounded" src="../imgs/redes/twitter.png" alt="logo twitter"></div>
+                    <div class="col-2"><img class="rounded" src="../imgs/redes/whatsapp.png" alt="logo whatsapp"></div>
                 </div>
             </div>
             <div class="col-6">
                 <h2 class="titulos-footer">Secciones</h2>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#">Inicio</a>
+                        <a href="{{ url('/') }}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Todas las propiedades</a>
+                        <a href="{{ url('/propiedades') }}">Todas las propiedades</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Contacto</a>
+                        <a href="{{ url('/contacto') }}">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Sobre Nosotros</a>
+                        <a href="{{ url('/sobre-nosotros') }}">Sobre Nosotros</a>
                     </li>
                 </ul>
             </div>
