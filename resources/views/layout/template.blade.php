@@ -109,28 +109,28 @@
                 <form class="form-inline busquedas" method="post" action="{{ url('/propiedad-codigo') }}">
                     @csrf
                     <input name="codigo" class="form-control mr-sm-2" type="search" placeholder="Código de propiedad" aria-label="Search">
-                    <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </li>
             <li class="nav-item busquedas-left">Por partido:
                 <form class="form-inline busquedas" method="post" action="{{ url('/propiedades-partido') }}">
                     @csrf
                     <input name="partido" class="form-control mr-sm-2" type="search" placeholder="Partido" aria-label="Search">
-                    <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </li>
             <li class="nav-item busquedas-left">Por localidad:
                 <form class="form-inline busquedas" method="post" action="{{ url('/propiedades-localidad') }}">
                     @csrf
                     <input name="localidad" class="form-control mr-sm-2" type="search" placeholder="Localidad" aria-label="Search">
-                    <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </li>
             <li class="nav-item busquedas-left">Por calle:
                 <form class="form-inline busquedas" method="post" action="{{ url('/propiedades-calle') }}">
                     @csrf
                     <input name="calle" class="form-control mr-sm-2" type="search" placeholder="Localidad" aria-label="Search">
-                    <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </li>
         </ul>
