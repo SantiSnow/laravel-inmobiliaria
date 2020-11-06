@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Inmueble;
 use App\Http\Controllers\busquedaPartido;
 use App\Http\Controllers\busquedaLocalidad;
+use App\Http\Controllers\busquedaCodigo;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +49,5 @@ Route::get('/propiedad/{id}', function ($id){
 Route::post('/propiedades-partido', [busquedaPartido::class, 'busquedaPorPartido']);
 
 Route::post('/propiedades-localidad', [busquedaLocalidad::class, 'busquedaPorLocalidad']);
+
+Route::post('/propiedad-codigo', [busquedaCodigo::class, 'busquedaPorCodigo']);

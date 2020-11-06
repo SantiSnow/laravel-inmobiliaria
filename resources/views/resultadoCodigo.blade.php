@@ -18,25 +18,21 @@
     <br />
     <br />
     <div class="text-center">
-        <h1>Propiedades destacadas:</h1>
+        <h1>Propiedades encontradas:</h1>
     </div>
     <br />
     <br />
     <div class="row">
-    @foreach($inmuebles_destacados as $i)
         <div class="col-md-4">
             <div class="card">
-                <img src="imgs/{{ $i->Foto }}" class="card-img-top" alt="Foto principal de la propiedad">
+                <img src="imgs/{{ $inmueble->Foto }}" class="card-img-top" alt="Foto principal de la propiedad">
                 <div class="card-body">
-                    <h5 class="card-title">{{ $i->Direccion }}</h5>
-                    <p class="card-text">{{ $i->Descripcion }}</p>
-                    <h6>Código de la propiedad: {{ $i->id }}</h6>
-                    <hr>
-                    <a href="propiedad/{{ $i->id }}" class="btn btn-light">Conocer más...</a>
+                    <h5 class="card-title">{{ $inmueble->Direccion }}</h5>
+                    <p class="card-text">{{ $inmueble->Descripcion }}</p>
+                    <a href="propiedad/{{ $inmueble->id }}" class="btn btn-light">Conocer más...</a>
                 </div>
             </div>
         </div>
-    @endforeach
     </div>
 @endsection
 @section("footer")

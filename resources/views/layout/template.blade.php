@@ -115,8 +115,9 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item busquedas-left">Por código:
-                <form class="form-inline busquedas">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Código de propiedad" aria-label="Search">
+                <form class="form-inline busquedas" method="post" action="{{ url('/propiedad-codigo') }}">
+                    @csrf
+                    <input name="codigo" class="form-control mr-sm-2" type="search" placeholder="Código de propiedad" aria-label="Search">
                     <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </li>
