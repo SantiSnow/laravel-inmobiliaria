@@ -19,6 +19,7 @@ class Inmueble extends Model
         'Tipo',
         'Foto',
         'Destacada',
-        'Descripcion'
+        'Descripcion',
+        'Operacion'
     ];
 }

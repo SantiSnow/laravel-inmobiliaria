@@ -26,6 +26,7 @@ class CreateInmueblesTable extends Migration
             $table->string('Foto');
             $table->Boolean('Destacada');
             $table->text('Descripcion');
+            $table->string('Operacion');
 
             $table->timestamps();
         });

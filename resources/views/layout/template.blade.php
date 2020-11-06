@@ -19,12 +19,6 @@
         .navbar{
             margin-top: 0;
         }
-        /*.busquedas{
-            margin-left: 35px;
-        }
-        .alq{
-            margin-left: 120px;
-        }*/
         .btn{
             margin: 5px;
         }
@@ -135,17 +129,20 @@
                     <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </li>
+            <li class="nav-item busquedas-left">Por calle:
+                <form class="form-inline busquedas" method="post" action="{{ url('/propiedades-calle') }}">
+                    @csrf
+                    <input name="calle" class="form-control mr-sm-2" type="search" placeholder="Localidad" aria-label="Search">
+                    <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <form class="form-inline alq busquedas">
-                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Alquileres</button>
-                </form>
+                <a class="btn btn-outline-danger my-2 my-sm-0" href="{{ url('/alquileres') }}">Todos los Alquileres</a>
             </li>
             <li class="nav-item">
-                <form class="form-inline busquedas">
-                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Ventas</button>
-                </form>
+                <a class="btn btn-outline-danger my-2 my-sm-0" href="{{ url('/ventas') }}">Todas las Ventas</a>
             </li>
         </ul>
     </div>
