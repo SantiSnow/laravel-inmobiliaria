@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Inmueble;
+use App\Http\Controllers\busquedaPartido;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,3 +42,6 @@ Route::get('/propiedad/{id}', function ($id){
     $propiedad = Inmueble::find($id);
     return view('propiedad', compact('propiedad'));
 });
+
+Route::post('/propiedades-encontradas', [busquedaPartido::class, 'busquedaPorPartido']);
+

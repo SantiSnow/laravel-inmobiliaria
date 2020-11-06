@@ -118,8 +118,9 @@
                 </form>
             </li>
             <li class="nav-item">
-                <form class="form-inline busquedas">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Partido" aria-label="Search">
+                <form class="form-inline busquedas" method="post" action="{{ url('/propiedades-encontradas') }}">
+                    @csrf
+                    <input name="partido" class="form-control mr-sm-2" type="search" placeholder="Partido" aria-label="Search">
                     <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </li>
