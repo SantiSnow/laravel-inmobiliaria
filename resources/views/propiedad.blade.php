@@ -42,6 +42,12 @@
     <br />
     <p>{{ $propiedad->Descripcion }}</p>
     <br />
+    <p>Precio de la propiedad: {{ $propiedad->Precio }}</p>
+    @if($propiedad->Operacion == "Venta")
+        <p>Esta propiedad se encuentra a la venta.</p>
+    @else
+        <p>Esta propiedad se encuentra disponible para alquiler.</p>
+    @endif
 
 @endsection
 @section("footer")

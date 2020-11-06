@@ -163,14 +163,15 @@
         <div class="row">
             <div class="col-6">
                 <h2 class="titulos-footer">LOGO - Nombre</h2>
-                <div>
+                <br />
+                <!--div>
                     <strong>Suscribite a nuestro newsletter</strong><br /><br />
                     <form class="form-inline">
                         <input id="envioCorreo1" class="form-control" type="email" placeholder="Correo Electronico" name="correo" id="correo" required />
                         <button type="submit" id="envioCorreo" class="btn btn-light my-2 my-sm-0">Suscribite</button>
                     </form>
                     <br />
-                </div>
+                </div-->
                 <div id="redes" class="row">
                     <div class="col-2"><img class="rounded" src="../imgs/redes/facebook.png" alt="logo facebook"></div>
                     <div class="col-2"><img class="rounded" src="../imgs/redes/gmail.png" alt="logo gmail"></div>

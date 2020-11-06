@@ -31,6 +31,9 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $i->Direccion }}</h5>
                         <p class="card-text">{{ $i->Descripcion }}</p>
+                        <h6>Código de la propiedad: {{ $i->id }}</h6>
+                        <h6>Valor: {{ $i->Precio }}</h6>
+                        <hr>
                         <a href="propiedad/{{ $i->id }}" class="btn btn-light">Conocer más...</a>
                     </div>
                 </div>
