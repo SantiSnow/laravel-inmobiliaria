@@ -6,6 +6,7 @@ use App\Http\Controllers\busquedaPartido;
 use App\Http\Controllers\busquedaLocalidad;
 use App\Http\Controllers\busquedaCodigo;
 use App\Http\Controllers\Operacion;
+use App\Http\Controllers\busquedaCalle;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,3 +57,5 @@ Route::post('/propiedad-codigo', [busquedaCodigo::class, 'busquedaPorCodigo']);
 Route::get('/ventas', [Operacion::class, 'Ventas']);
 
 Route::get('/alquileres', [Operacion::class, 'Alquileres']);
+
+Route::post('/propiedades-calle', [busquedaCalle::class, 'busquedaPorCalle']);

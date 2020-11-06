@@ -40,9 +40,6 @@
             background-color: #dae0e5;
             border-radius: 5px;
         }
-        .busquedas-left{
-            margin-right: 25px;
-        }
     </style>
 </head>
 <body>

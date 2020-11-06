@@ -10,7 +10,7 @@ class Operacion extends Controller
 
     public function Ventas(){
         $ventas = Inmueble::where('Operacion', 'Venta')
-            ->OrderBy('id', 'desc')
+            ->orderBy('id', 'desc')
             ->get();
 
         return view('ventas', compact('ventas'));
