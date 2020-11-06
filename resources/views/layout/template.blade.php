@@ -46,13 +46,16 @@
             background-color: #dae0e5;
             border-radius: 5px;
         }
+        .busquedas-left{
+            margin-right: 25px;
+        }
     </style>
 </head>
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         @yield("navbar")
-        <a class="navbar-brand" href="#">Miriam Mendoza</a>
+        <a class="navbar-brand" href="{{ url('/') }}">Miriam Mendoza</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -111,22 +114,23 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+            <li class="nav-item busquedas-left">Por código:
                 <form class="form-inline busquedas">
                     <input class="form-control mr-sm-2" type="search" placeholder="Código de propiedad" aria-label="Search">
                     <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </li>
-            <li class="nav-item">
-                <form class="form-inline busquedas" method="post" action="{{ url('/propiedades-encontradas') }}">
+            <li class="nav-item busquedas-left">Por partido:
+                <form class="form-inline busquedas" method="post" action="{{ url('/propiedades-partido') }}">
                     @csrf
                     <input name="partido" class="form-control mr-sm-2" type="search" placeholder="Partido" aria-label="Search">
                     <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </li>
-            <li class="nav-item">
-                <form class="form-inline busquedas">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Localidad" aria-label="Search">
+            <li class="nav-item busquedas-left">Por localidad:
+                <form class="form-inline busquedas" method="post" action="{{ url('/propiedades-localidad') }}">
+                    @csrf
+                    <input name="localidad" class="form-control mr-sm-2" type="search" placeholder="Localidad" aria-label="Search">
                     <button class="btn btn-light my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </li>
@@ -134,7 +138,6 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <form class="form-inline alq busquedas">
-                    <!-- input class="form-control mr-sm-2" type="search" placeholder="Localidad" aria-label="Search" -->
                     <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Alquileres</button>
                 </form>
             </li>

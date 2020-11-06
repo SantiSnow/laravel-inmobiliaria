@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Inmueble;
 use App\Http\Controllers\busquedaPartido;
+use App\Http\Controllers\busquedaLocalidad;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,5 +45,6 @@ Route::get('/propiedad/{id}', function ($id){
     return view('propiedad', compact('propiedad'));
 });
 
-Route::post('/propiedades-encontradas', [busquedaPartido::class, 'busquedaPorPartido']);
+Route::post('/propiedades-partido', [busquedaPartido::class, 'busquedaPorPartido']);
 
+Route::post('/propiedades-localidad', [busquedaLocalidad::class, 'busquedaPorLocalidad']);
