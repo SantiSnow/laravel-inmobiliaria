@@ -84,8 +84,7 @@
                     <p class="text-center">Alcanzar tus sueños, puede lograrse.</p>
                     <p class="text-center">Llegar a esa propiedad en la cual siempre soñaste, puede ser posible con nosotros.</p></strong>
                 </div>
-                <p>&nbsp;</p>
-                <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Ver todas las propiedades</a> </p>
+                <p class="text-center"><a class="btn btn-primary btn-lg" href="{{ url('/propiedades') }}" role="button">Ver todas las propiedades</a> </p>
                 <br />
                 <br />
                 <br />
