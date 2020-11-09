@@ -135,10 +135,10 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="btn btn-outline-danger my-2 my-sm-0" href="{{ url('/alquileres') }}">Todos los Alquileres</a>
+                <a class="btn btn-outline-primary my-2 my-sm-0" href="{{ url('/alquileres') }}">Todos los Alquileres</a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-outline-danger my-2 my-sm-0" href="{{ url('/ventas') }}">Todas las Ventas</a>
+                <a class="btn btn-outline-primary my-2 my-sm-0" href="{{ url('/ventas') }}">Todas las Ventas</a>
             </li>
         </ul>
     </div>
