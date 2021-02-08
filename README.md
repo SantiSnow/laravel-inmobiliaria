@@ -11,7 +11,7 @@
 
 Página web creada para gestionar un servicio de inmobiliaria, que muestra las propiedades destacadas en su página principal o Home, contiene un buscador por código, localidad, partido, entre otras funciones. 
 
-###Dependencias, herramientas y demás:
+### Dependencias, herramientas y demás:
 
 - Laravel, el Framework de código abierto de PHP.
 - Bootstrap, el Framework de CSS y JavaScript para la creación de interfaces responsive
