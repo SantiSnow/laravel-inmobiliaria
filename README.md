@@ -13,11 +13,12 @@ Página web creada para gestionar un servicio de inmobiliaria, que muestra las p
 
 ### Dependencias, herramientas y demás:
 
-- Laravel, el Framework de código abierto de PHP.
-- Bootstrap, el Framework de CSS y JavaScript para la creación de interfaces responsive
-- Bootswatch, que ofrece temas y variantes de Bootstrap.
-- MySQL
-- HTML, CSS y JavaScript
+* Laravel, el Framework de código abierto de PHP.
+* Bootstrap, el Framework de CSS y JavaScript para la creación de interfaces responsive
+* jQuery
+* Bootswatch, que ofrece temas y variantes de Bootstrap.
+* MySQL
+* HTML, CSS y JavaScript
 
 ## License of Laravel
 
